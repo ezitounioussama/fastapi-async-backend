@@ -10,11 +10,11 @@ real latency — which is what makes timeouts and partial failures reproducible 
 on a real service misbehaving at the right moment.
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 
-python main.py     # http://127.0.0.1:8000/docs
-pytest -q          # 37 passed
+uv run python main.py     # http://127.0.0.1:8000/docs
+uv run pytest -q          # 37 passed
 ```
 
 ## Also in this repo
